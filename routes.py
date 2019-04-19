@@ -39,8 +39,10 @@ def main():
         # Check for any errors...
         # If errors exist, print them out.
         errors = ordering_system.parse(request.form)
-        if errors is not None:
+        if type (errors) != str:
             return render_template('menu.html', form = request.form, errors = errors)
+        else:
+            return render_template('order_confirmed.html', confirm = errors)
         
         return render_template('menu.html', form = request.form)
     return render_template('menu.html')
