@@ -102,7 +102,8 @@ class OnlineOrderingSystem():
         ord.Checkout()
 
         # Confirm the order!
-        print(ord.confirm())
+        #print(ord.confirm())
+        
 
         self._order_list.append(ord)
 
@@ -112,6 +113,8 @@ class OnlineOrderingSystem():
 
         # Update the inventory in preparation for the next order...
         self._inventory.updateInventory(main_type, Main_size, main_q, Other_type, sides_size, side_q)
+        
+        return ord.confirm()
 
 
     # Refactor Opportunity: Placing an order again can be done by calling placeOrder again. perhaps an id field would work
