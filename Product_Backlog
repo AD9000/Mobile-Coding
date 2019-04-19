@@ -1,0 +1,23 @@
+
+-------------------------------------Backend------------------------------------------------------------------
+1. Convert sides to a list. (Side type and the side size, so that the customer can order more than one side)
+2. Do the same for the mains...In order to eliminate the orderMore function
+    - Could also use the same order id to instead append mains to the order...
+3. Errors class: Check if user has entered the correct unit...(Or make it compulsory in the front end)
+4. Change calculate price methods to make code more modular
+5. Check if price calculation is accurate
+6. Staff update inventory...Correct import errors.
+--------------------------------------------------------------------------------------------------------------
+------------------------------------FrontEnd-----------------------------------------------------------------
+1. Everything.
+
+
+--------------------------------COMPLETED.----------------------------------------
+1. Change the isAvailable/check_availability function to check for the size of the main/side.
+2. Add a value() method to each of the Enum classes to remove the size issue. (Too many lines of code): more like the code 
+   is not modular... Any person trying to use the Enums would have to re-write such big update inventory code...
+3. Move the inventory change lines to the Inventory Class and tie them all together...
+4. Implement the updateInventory function in the inventory class.
+5. Remove all the excess from the program. According to the client, the burgers are stored as a single unit, 
+   and as devs, we need to honour that. Remove all storage for buns, patties etc from the inventory. Also change
+   storage of cans from mL to number of cans/bottles of different sizes
